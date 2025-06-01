@@ -50,13 +50,12 @@ pacman -S --noconfirm \
 	wl-clipboard \
 	grim \
 	slurp \
-	swaylock \
-	swayidle \
 	rofi \
 	waybar \
 	wofi \
 	kitty \
-	neovim
+	neovim \
+	nwg-displays
 
 # === Intel graphics ===
 pacman -S --noconfirm \
@@ -124,9 +123,15 @@ sudo -u $(logname) yay -S --noconfirm hyprlock
 echo "🖼️ Installing hyprpaper..."
 sudo -u $(logname) yay -S --noconfirm hyprpaper
 
+echo "Installing hypridle..."
+sudo -u $(logname) yay -S --noconfirm hypridle
+
+echo "Installing nwg-look..."
+sudo -u $(logname) yay -S --noconfirm nwg-look
+
 # === Communication tools ===
 echo "💬 Installing Slack, Zoom, and Discord..."
-sudo -u $(logname) yay -S --noconfirm slack zoom discord_arch_electron
+sudo -u $(logname) yay -S --noconfirm slack-desktop zoom discord_arch_electron
 
 # === Web Browsers ===
 echo "🌐 Installing qutebrowser and Microsoft Edge..."
